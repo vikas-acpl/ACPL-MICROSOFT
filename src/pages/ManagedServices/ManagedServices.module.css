@@ -1,0 +1,273 @@
+.heroSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer {
+    position: relative;
+}
+
+.heroSection .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -310px;
+    height: 50%;
+    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+}
+
+.partnerBadge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.pageContent h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.pageContent p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-gray);
+}
+
+/* WHY ACPL SECTION */
+
+.whyAcpl {
+    margin-top: -100px;
+    z-index: 1;
+}
+
+.whyAcplContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Outer white card */
+.whyCard {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+    background-color: var(--color-white);
+    border-radius: 18px;
+    padding: 40px 48px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Left text column */
+.whyText {
+    max-width: 640px;
+}
+
+.whyTitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0 0 20px;
+}
+
+.whyBody {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+/* Right “ACPL Difference” card */
+.differenceCard {
+    background: var(--background-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.differenceTitle {
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.differenceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.differenceList li {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Services SECTION */
+
+.services {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.servicesHeading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.servicesHeading h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 24px;
+}
+
+.servicesHeading p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+.serviceCard {
+    background: var(--color-white);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e2ecf8;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    border-color: var(--color-primary)
+}
+
+.serviceCard:hover::after {
+    width: 100%;
+}
+
+.serviceCard:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.serviceCardHeader {
+    background: white;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.serviceCardIcon {
+    width: 48px;
+    height: 48px;
+    background: var(--background-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceCard h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.serviceCardBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceCardRow {
+    padding: 20px 0;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.serviceCard .badgeFix {
+    background: #E0f2f1;
+    color: #00695C;
+}
+
+.serviceCard .badgeManage {
+    background: #E2f2fd;
+    color: #0277bd;
+}
+
+.serviceCard .badgeCheck {
+    background: #fff3f0;
+    color: #E65100;
+}
+
+.serviceList {
+    font-size: 12px;
+    color: var(--text-gray);
+    padding-left: 0;
+}
+
+.serviceList li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 6px;
+    list-style: none;
+}
+
+.serviceList li::before {
+    content: '•';
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}

@@ -1,0 +1,397 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding: 15px 50px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO SECTION */
+
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+}
+
+.logo img {
+    width: auto;
+    height: 50px;
+}
+
+.dividerVertical {
+    width: 1px;
+    height: 24px;
+    background-color: #E2E8F0;
+}
+
+.partnerBadge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* NAV LINKS */
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-black);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+    font-family: var(--font-primary);
+}
+
+.navLink:hover {
+    color: var(--color-primary);
+}
+
+/* SERVICES DROPDOWN */
+
+.dropdownToggle {
+    position: relative;
+}
+
+.chevronIcon {
+    transition: transform 0.2s ease;
+}
+
+.active .chevronIcon {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);        /* center under “Services” */
+  background-color: var(--color-white);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+  padding: 24px;
+  z-index: 1000;
+  animation: navSlideDown 0.18s ease-out;
+}
+
+.dropdownContent {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 18px;
+}
+
+.dropdownSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dropdownSection:last-child {
+    border-right: none;
+}
+
+.dropdownTitle {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-gray);
+    margin-bottom: 14px;
+}
+
+.dropdownList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdownList li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownList a {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-black);
+    text-decoration: none;
+    padding: 6px 0;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.dropdownSubsection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-radius: 10px;
+}
+
+.subsectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subsectionContent h4 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.subsectionContent p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.ctaButton {
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* HAMBURGER (MOBILE) */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburgerLine {
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: var(--text-black);
+    transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.active .hamburgerLine:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.active .hamburgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+.active .hamburgerLine:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.serviceCardIcon {
+    width: 48px;
+    height: 48px;
+    background: var(--background-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceItem img {
+  width: 32px;
+  height: 32px;
+}
+
+.serviceItem h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-black);
+  margin-bottom: 4px;
+}
+
+.serviceItem h3:hover{
+    color: var(--color-primary);
+}
+
+.serviceItem p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-gray);
+}
+
+@media (max-width: 1024px) {
+    .navContainer {
+        padding: 12px 32px;
+    }
+}
+
+/* RESPONSIVE – MOBILE MENU */
+
+@media (max-width: 768px) {
+    .navContainer {
+        padding: 10px 24px;
+    }
+
+    .navMenu {
+        display: none;
+    }
+
+    .mobileMenuOpen {
+        display: flex;
+        position: fixed;
+        inset: 60px 0 0 0;
+        background-color: var(--color-white);
+        z-index: 95;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    .navList {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navItem {
+        width: 100%;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .navItem:last-child {
+        border-bottom: none;
+    }
+
+    .navLink {
+        width: 100%;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .dropdownMenu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        min-width: 100%;
+        margin-top: 0;
+    }
+
+    .dropdownContent {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdownSection {
+        border-right: none;
+        border-top: 1px solid #e2e8f0;
+        padding: 16px 24px;
+    }
+
+    .ctaButton {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobileOverlay {
+        display: block;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .navbar {
+        background-color: var(--color-white);
+        border-bottom: 1px solid #e2e8f0;
+        border-radius: 0;
+    }
+
+    .navContainer {
+        padding: 12px 0px;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: none;
+    }
+
+    .navList {
+        gap: 0;
+    }
+
+    .logo img {
+        width: auto;
+        height: 40px;
+    }
+
+    .dividerVertical {
+        display: none;
+    }
+
+    .partnerBadge {
+        display: none;
+    }
+
+    .contactBtn {
+        margin: 20px;
+    }
+}

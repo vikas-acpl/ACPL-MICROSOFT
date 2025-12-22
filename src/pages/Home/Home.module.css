@@ -1,0 +1,428 @@
+.heroSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer {
+    position: relative;
+}
+
+.heroSection .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -310px;
+    height: 50%;
+    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+    margin-top: 80px;
+}
+
+.partnerBadge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.pageContent h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.pageContent p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-gray);
+}
+
+
+.actions {
+    display: flex;
+    gap: 18px;
+}
+
+.uspBar {
+    margin-top: 40px;
+    gap: 60px;
+    padding: 30px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.uspItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.uspItem img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ACPL ADVANTAGE SECTION */
+
+.acplAdvantage {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.advantageContainer {
+    display: flex;
+}
+
+.advantageGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.1fr;
+    gap: 56px;
+    width: 100%;
+}
+
+.advantageTag {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+.advantageTitle {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 24px;
+}
+
+.advantageBody {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+.advantageBody+.advantageBody {
+    margin-top: 16px;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.statCard {
+    position: relative;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 28px;
+    overflow: hidden;
+    border: 1px solid #e2ecf8;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statHighlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.statCard:hover .statHighlight {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.statValue {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+}
+
+.statLabel {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 8px;
+}
+
+.statDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* What Sets Us Apart SECTION */
+
+.setUsApart {
+    padding: 60px 0;
+    background: linear-gradient(94.71deg, #00A4EF -9.09%, #002050 107.14%);
+    color: var(--color-white);
+}
+
+.apartContainer {
+    text-align: center;
+}
+
+.apartTitle {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 36px;
+}
+
+.apartGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.apartCard {
+    background: linear-gradient(135.41deg, #00A4EF 10.64%, #002050 113.79%);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.iconCircle {
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconCircle img {
+    width: 40px;
+}
+
+.apartText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-white);
+}
+
+/* Services SECTION */
+
+.services {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.servicesHeading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.servicesHeading h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 24px;
+}
+
+.servicesHeading p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+.serviceCard {
+    background: var(--color-white);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e2ecf8;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    border-color: var(--color-primary)
+}
+
+.serviceCard:hover::after {
+    width: 100%;
+}
+
+.serviceCard:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.serviceCard img{
+    width: 48px;
+}
+
+.serviceCard .partnerBadge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.serviceCard h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.serviceCard p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+.btnText {
+    color: var(--color-primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btnText:hover {
+    gap: 10px;
+    color: var(--color-hover);
+}
+
+/* SERVICE DELIVERY APPROACH */
+
+.serviceDelivery {
+    padding: 80px 0 100px;
+    background: linear-gradient(90deg, #050608 0%, #0073d0 55%, #00a4ef 100%);
+    color: var(--color-white);
+}
+
+.serviceDeliveryContainer {
+    text-align: center;
+}
+
+.serviceDeliveryContainer h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 60px;
+}
+
+.deliveryFrame {
+    position: relative;
+    display: inline-block;
+}
+
+.deliveryApprochImg {
+    height: 500px;
+    width: auto;
+    display: block;
+}
+
+.whiteLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+@media (max-width: 768px) {
+    .acplAdvantage {
+        padding: 64px 0;
+    }
+
+    .advantageTitle {
+        font-size: 32px;
+    }
+
+    .statsGrid {
+        gap: 16px;
+    }
+
+    .statCard {
+        padding: 22px 20px 20px;
+    }
+
+    .serviceDelivery {
+        padding: 56px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}

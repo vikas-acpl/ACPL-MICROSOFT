@@ -1,0 +1,167 @@
+.heroSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer {
+    position: relative;
+}
+
+.heroSection .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -310px;
+    height: 50%;
+    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+}
+
+.partnerBadge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.pageContent h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.pageContent p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-gray);
+}
+
+.solutions {
+    margin-top: -100px;
+  z-index: 1;
+}
+
+.solutionContainer {
+    /* container already handles width/padding */
+}
+
+.card {
+    overflow: hidden;
+    background-color: var(--color-white);
+    border-radius: 18px;
+    padding: 40px 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Top heading */
+.headerRow {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.heading span {
+    color: var(--color-primary);
+}
+
+/* Groups */
+.tableWrapper {
+    padding-top: 4px;
+}
+
+.group {
+    padding: 0 0 8px;
+}
+
+.groupHeader {
+    padding: 10px 24px 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Inner table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.row+.row {
+    border-top: 1px solid #e5e7eb;
+}
+
+.colTitle {
+    padding: 6px 24px;
+    color: var(--text-secondary);
+}
+
+.colDays {
+    padding: 6px 24px;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.offering{
+    margin-top: 100px;
+}
+
+.offeringContent{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.offeringContent img{
+    width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        border-radius: 18px;
+    }
+
+    .heading {
+        font-size: 14px;
+    }
+
+    .groupHeader {
+        padding: 10px 16px 6px;
+    }
+
+    .colTitle,
+    .colDays {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

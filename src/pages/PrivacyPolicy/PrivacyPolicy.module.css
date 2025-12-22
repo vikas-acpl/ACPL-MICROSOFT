@@ -1,0 +1,140 @@
+.heroSection {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer {
+    position: relative;
+}
+
+.heroSection .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -120px;
+    height: 50%;
+    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+}
+
+.pageContent h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+/* Body section */
+.policy {
+  background-color: var(--color-white);
+  padding-top: 100px;
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-black);
+  margin: 28px 0 8px;
+}
+
+.bodyText {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+/* Bullet list styling */
+.list {
+  margin: 0 0 16px 0;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.list li + li {
+  margin-top: 4px;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: var(--color-primary);
+}
+
+/* Link */
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: var(--color-hover);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroSection {
+    height: 32vh;
+  }
+
+  .pageContent h1 {
+    font-size: 32px;
+  }
+
+  .policy {
+    padding: 32px 0 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 28vh;
+  }
+
+  .pageContent h1 {
+    font-size: 26px;
+  }
+
+  .policyContainer {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,233 @@
+.heroSection {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContainer {
+    position: relative;
+}
+
+.heroSection .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -310px;
+    height: 50%;
+    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    filter: blur(240px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+}
+
+.partnerBadge {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--background-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.pageContent h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.pageContent p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-gray);
+}
+
+.aboutUsp {
+    margin-top: -100px;
+}
+
+.uspGrid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.uspCard {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e2ecf8;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.uspIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uspCard h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.uspIconSecondary .uspIcon {
+    background-color: #e41f26;
+}
+
+.uspIconSecondary h3 {
+    color: #e41f26;
+}
+
+.uspIcon img {
+    width: 40px;
+}
+
+.uspCard p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-gray);
+    text-align: center;
+}
+
+/* ACPL ADVANTAGE SECTION */
+
+.acplAdvantage {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.advantageContainer {
+    display: flex;
+}
+
+.advantageGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.1fr;
+    gap: 56px;
+    width: 100%;
+}
+
+.advantageTag {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+.advantageTitle {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 24px;
+}
+
+.advantageBody {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+.advantageBody+.advantageBody {
+    margin-top: 16px;
+}
+
+.rightImage {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightImage img {
+    width: auto;
+    height: 250px;
+}
+
+/* Services SECTION */
+
+.services {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.servicesHeading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.servicesHeading h2 {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 24px;
+}
+
+.servicesHeading p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+.cityGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.cityCard {
+    background: var(--color-white);
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e2ecf8;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.cityCardIcon img {
+    width: auto;
+    height: 60px;
+}
+
+.cityCard h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
