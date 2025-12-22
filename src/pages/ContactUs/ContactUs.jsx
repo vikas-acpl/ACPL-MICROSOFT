@@ -10,9 +10,9 @@ const ContactUs = () => {
           <div className={styles.background}></div>
           <div className={styles.pageContent}>
             <span className={styles.partnerBadge}>Contact Us</span>
-            <h1>Let’s Build a Stronger Microsoft <br />
+            <h1>Let’s Build a Stronger Microsoft <br className='responsive-br' />
               Security Posture Together</h1>
-            <p>Connect with ACPL’s certified Microsoft specialists to discuss your cloud, identity, threat<br />
+            <p>Connect with ACPL’s certified Microsoft specialists to discuss your cloud, identity, threat<br className='responsive-br' />
               protection, or compliance requirements — and get tailored guidance for your enterprise.</p>
           </div>
         </div>

@@ -18,7 +18,7 @@
     right: 0;
     bottom: -310px;
     height: 50%;
-    background-image: radial-gradient(ellipse 120% 80% at center,rgb(0, 164, 239) 0%,rgb(0, 164, 239) 40%,rgba(0, 164, 239, 0) 70%);
+    background-image: radial-gradient(ellipse 90% 60% at center,rgb(0, 164, 239) 0%,rgb(0, 164, 239) 40%,rgba(0, 164, 239, 0) 70%);
     filter: blur(240px);
     pointer-events: none;
     z-index: 0;
@@ -102,9 +102,10 @@
 
 .groupHeader {
     padding: 10px 24px 6px;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--color-primary);
+    margin-bottom: 12px;
 }
 
 /* Inner table */

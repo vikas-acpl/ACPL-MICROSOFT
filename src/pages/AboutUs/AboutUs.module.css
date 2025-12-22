@@ -262,16 +262,33 @@
         font-size: 14px;
     }
 
+     .partnerBadge{
+        font-size: 12px;
+    }
+
     .uspGrid{
         grid-template-columns: repeat(2,1fr);
     }
 
     .uspCard{
-        padding: 24px;
+        padding: 24px 12px;
+    }
+
+     .uspCard:last-child{
+         grid-column: 1 / -1;
+     }
+
+    .uspIcon {
+        width: 60px;
+        height: 60px;
     }
 
     .uspIcon img{
-        width: 40px;
+        width: 30px;
+    }
+
+    .uspCard h3{
+        font-size: 18px;
     }
 
     .acplAdvantage {

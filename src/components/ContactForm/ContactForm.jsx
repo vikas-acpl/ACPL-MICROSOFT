@@ -6,7 +6,8 @@ import styles from './ContactForm.module.css'
 import emailIcon from '../../assets/email-black.svg'
 import phoneIcon from '../../assets/phone-black.svg'
 import SuccessModal from '../SuccessModal/SuccessModal'
-import { countryCodes } from '../../data/countryCodes' // move the big array into its own file
+import { countryCodes } from '../../data/countryCodes'
+import { Link } from 'react-router-dom'
 
 const initialValues = {
     firstName: '',
@@ -277,7 +278,7 @@ const ContactForm = () => {
                                         />
                                         <span className={styles.legal}>
                                             By submitting, you agree to the processing of your data by ACPL Systems
-                                            Pvt. Ltd. as described in the <a href="/privacy-policy">Privacy Policy</a>.
+                                            Pvt. Ltd. as described in the <Link to="/privacy-policy">Privacy Policy</Link>.
                                         </span>
                                     </label>
                                 </div>

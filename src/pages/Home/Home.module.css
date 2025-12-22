@@ -427,6 +427,10 @@
         margin-top: 100px;
     }
 
+    .partnerBadge{
+        font-size: 12px;
+    }
+
     .pageContent h1 {
         font-size: 32px;
     }

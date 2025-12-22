@@ -1,43 +1,43 @@
 .heroSection {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
-    position: relative;
-    overflow: hidden;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .heroContainer {
-    position: relative;
+  position: relative;
 }
 
 .heroSection .background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -120px;
-    height: 50%;
-    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
-    filter: blur(240px);
-    pointer-events: none;
-    z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  height: 50%;
+  background-image: radial-gradient(ellipse 90% 60% at center, rgb(0, 164, 239) 0%, rgb(0, 164, 239) 40%, rgba(0, 164, 239, 0) 70%);
+  filter: blur(240px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .pageContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 35px;
-    z-index: 1;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 35px;
+  z-index: 1;
+  position: relative;
 }
 
 .pageContent h1 {
-    font-size: 56px;
-    font-weight: 600;
-    line-height: 1.1;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 /* Body section */
@@ -83,7 +83,7 @@
   color: var(--text-secondary);
 }
 
-.list li + li {
+.list li+li {
   margin-top: 4px;
 }
 
@@ -127,7 +127,18 @@
 
 @media (max-width: 480px) {
   .heroSection {
-    height: 28vh;
+    height: 30vh;
+    align-items: start;
+  }
+
+  .heroSection .background {
+    bottom: 0px;
+    -webkit-backdrop-filter: blur(50px) !important;
+  }
+
+  .pageContent {
+    gap: 24px;
+    margin-top: 130px;
   }
 
   .pageContent h1 {
@@ -136,5 +147,9 @@
 
   .policyContainer {
     max-width: 100%;
+  }
+
+  .policy {
+    padding: 60px 0;
   }
 }

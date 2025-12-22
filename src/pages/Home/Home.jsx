@@ -220,63 +220,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <section id="services" className={styles.services}>
-        <div className={`container ${styles.serviceContainer}`}>
-          <div className={styles.servicesHeading}>
-            <h2>A Complete Security Ecosystem</h2>
-            <p>Built on the robust Microsoft Security portfolio, managed by ACPL.</p>
-          </div>
-          <div className={styles.servicesGrid}>
-            <div className={styles.serviceCard}>
-              <div><img src={ServiceIcon1} /></div>
-              <span className={styles.partnerBadge}>Azure · Defender for Cloud</span>
-              <h3>Cloud Security</h3>
-              <p>Secure your cloud workloads with automated threat protection and CSPM across Azure and multicloud.</p>
-              <Link to="/services/cloud-security" className={styles.btnText}>Explore Cloud</Link>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div><img src={ServiceIcon2} /></div>
-              <span className={styles.partnerBadge}>Defender for Endpoint · Intune</span>
-              <h3>Endpoint Security</h3>
-              <p>Protect and manage every device with AI-powered prevention and detection across Windows, macOS, iOS, and Android.</p>
-              <Link to="/services/endpoint-security" className={styles.btnText}>Explore Endpoint</Link>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div><img src={ServiceIcon3} /></div>
-              <span className={styles.partnerBadge}>Microsoft Entra ID</span>
-              <h3>Identity & Access</h3>
-              <p>Implement Zero Trust with secure access, adaptive authentication, and lifecycle governance.</p>
-              <Link to="/services/zero-trust" className={styles.btnText}>Explore Identity</Link>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div><img src={ServiceIcon4} /></div>
-              <span className={styles.partnerBadge}>Sentinel · Defender XDR</span>
-              <h3>SIEM & XDR</h3>
-              <p>Unify detection, investigation, and response across endpoints, identities, email, apps, and networks.</p>
-              <Link to="/services/siem-xdr" className={styles.btnText}>Explore SIEM</Link>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div><img src={ServiceIcon5} /></div>
-              <span className={styles.partnerBadge}>Microsoft Purview</span>
-              <h3>Data Security</h3>
-              <p>Discover, classify, monitor, and protect sensitive business data across clouds, endpoints, and apps.</p>
-              <Link to="/services/data-security" className={styles.btnText}>Explore Data</Link>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div><img src={ServiceIcon6} /></div>
-              <span className={styles.partnerBadge}>Compliance Manager</span>
-              <h3>Compliance</h3>
-              <p>Simplify compliance, manage risk, and accelerate regulatory readiness with built-in governance.</p>
-              <Link to="/services/compliance" className={styles.btnText}>Explore Compliance</Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section id="services" className={styles.services}>
         <div className={`container ${styles.serviceContainer}`}>
           <div className={styles.servicesHeading}>

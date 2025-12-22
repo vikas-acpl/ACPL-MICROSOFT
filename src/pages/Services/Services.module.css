@@ -154,19 +154,32 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 768px) {
     .cardsGrid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroWrapper {
+        padding: 100px 0;
     }
 
     .heroTitle {
         font-size: 32px;
     }
-}
 
-@media (max-width: 600px) {
-    .heroWrapper {
-        padding: 40px 0 48px;
+    .heroSubtitle{
+        font-size: 14px;
+    }
+
+    .serviceCard{
+        padding: 24px;
+    }
+
+    .cardTitle{
+        font-size: 18px;
+        line-height: 1.2;
     }
 
 }

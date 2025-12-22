@@ -208,7 +208,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .contactContainer {
         grid-template-columns: 1fr;
     }
@@ -218,7 +218,20 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+
+    .contactLayout{
+        grid-template-columns: 1fr;
+    }
+
+    .formCard{
+        padding: 40px 24px;
+    }
+
+    .formTitle{
+        font-size: 24px;
+    }
+
     .contactSection {
         padding: 48px 0 64px;
     }

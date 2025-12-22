@@ -57,3 +57,31 @@
     line-height: 1.5;
     color: var(--text-gray);
 }
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+     .heroSection {
+        height: 65vh;
+        align-items: start;
+    }
+
+    .pageContent {
+        gap: 24px;
+        margin-top: 100px;
+    }
+
+    .partnerBadge{
+        font-size: 12px;
+    }
+
+    .pageContent h1 {
+        font-size: 32px;
+    }
+
+    .pageContent p {
+        font-size: 14px;
+    }
+}
