@@ -18,7 +18,7 @@
     right: 0;
     bottom: -310px;
     height: 50%;
-    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    background-image: radial-gradient(ellipse 90% 60% at center,rgb(0, 164, 239) 0%,rgb(0, 164, 239) 40%,rgba(0, 164, 239, 0) 70%);
     filter: blur(240px);
     pointer-events: none;
     z-index: 0;
@@ -35,18 +35,20 @@
 }
 
 .partnerBadge {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--color-primary);
-    background-color: var(--background-color);
+    background-color: #C0E4FF;
+    border: 1px solid #00A4EF;
     padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 30px;
 }
 
 .pageContent h1 {
     font-size: 56px;
     font-weight: 600;
     line-height: 1.1;
+    font-family: var(--font-heading);
 }
 
 .pageContent p {
@@ -61,6 +63,7 @@
 .whyAcpl {
     margin-top: -100px;
     z-index: 1;
+    margin-bottom: 100px;
 }
 
 .whyAcplContainer {
@@ -74,7 +77,7 @@
     grid-template-columns: 3fr 2fr;
     gap: 40px;
     background-color: var(--color-white);
-    border-radius: 18px;
+    border-radius: 12px;
     padding: 40px 48px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -271,6 +274,7 @@
 @media (max-width: 480px) {
 
     .heroSection {
+        height: 75vh;
         align-items: start;
     }
 
@@ -287,7 +291,10 @@
         font-size: 14px;
     }
 
-    .whyAcpl {}
+    .whyAcpl {
+        margin-top: -60px;
+        margin-bottom: 60px;
+    }
 
     .whyCard {
         grid-template-columns: 1fr;

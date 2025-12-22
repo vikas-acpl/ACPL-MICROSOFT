@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Home.module.css'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import BarIcon1 from '../../assets/BarIcon1.svg'
 import BarIcon2 from '../../assets/BarIcon2.svg'
@@ -9,16 +10,86 @@ import ApartIcon1 from '../../assets/ApartIcon1.svg'
 import ApartIcon2 from '../../assets/ApartIcon2.svg'
 import ApartIcon3 from '../../assets/ApartIcon3.svg'
 import ApartIcon4 from '../../assets/ApartIcon4.svg'
+import DeliveryApproch from '../../assets/DeliveryApproch1.svg'
+import AcplWhiteLogo from '../../assets/acpl-logo-white.svg'
 import ServiceIcon1 from '../../assets/ServiceIcon1.svg'
 import ServiceIcon2 from '../../assets/ServiceIcon2.svg'
 import ServiceIcon3 from '../../assets/ServiceIcon3.svg'
 import ServiceIcon4 from '../../assets/ServiceIcon4.svg'
 import ServiceIcon5 from '../../assets/ServiceIcon5.svg'
 import ServiceIcon6 from '../../assets/ServiceIcon6.svg'
-import DeliveryApproch from '../../assets/DeliveryApproch1.svg'
-import AcplWhiteLogo from '../../assets/acpl-logo-white.svg'
+import ServiceIconClr1 from '../../assets/ServiceIconClr1.svg'
+import ServiceIconClr2 from '../../assets/ServiceIconClr2.svg'
+import ServiceIconClr3 from '../../assets/ServiceIconClr3.svg'
+import ServiceIconClr4 from '../../assets/ServiceIconClr4.svg'
+import ServiceIconClr5 from '../../assets/ServiceIconClr5.svg'
+import ServiceIconClr6 from '../../assets/ServiceIconClr6.svg'
+
+const services = [
+  {
+    title: 'Cloud Security',
+    badge: 'Azure · Defender for Cloud',
+    description:
+      'Secure your cloud workloads with automated threat protection and CSPM across Azure and multicloud.',
+    path: '/services/cloud-security',
+    icon: ServiceIcon1,
+    iconHover: ServiceIconClr1,
+    cta: 'Explore Cloud',
+  },
+  {
+    title: 'Endpoint Security',
+    badge: 'Defender for Endpoint · Intune',
+    description:
+      'Protect and manage every device with AI-powered prevention and detection across Windows, macOS, iOS, and Android.',
+    path: '/services/endpoint-security',
+    icon: ServiceIcon2,
+    iconHover: ServiceIconClr2,
+    cta: 'Explore Endpoint',
+  },
+  {
+    title: 'Identity & Access',
+    badge: 'Microsoft Entra ID',
+    description:
+      'Implement Zero Trust with secure access, adaptive authentication, and lifecycle governance.',
+    path: '/services/zero-trust',
+    icon: ServiceIcon3,
+    iconHover: ServiceIconClr3,
+    cta: 'Explore Identity',
+  },
+  {
+    title: 'SIEM & XDR',
+    badge: 'Sentinel · Defender XDR',
+    description:
+      'Unify detection, investigation, and response across endpoints, identities, email, apps, and networks.',
+    path: '/services/siem-xdr',
+    icon: ServiceIcon4,
+    iconHover: ServiceIconClr4,
+    cta: 'Explore SIEM',
+  },
+  {
+    title: 'Data Security',
+    badge: 'Microsoft Purview',
+    description:
+      'Discover, classify, monitor, and protect sensitive business data across clouds, endpoints, and apps.',
+    path: '/services/data-security',
+    icon: ServiceIcon5,
+    iconHover: ServiceIconClr5,
+    cta: 'Explore Data',
+  },
+  {
+    title: 'Compliance',
+    badge: 'Compliance Manager',
+    description:
+      'Simplify compliance, manage risk, and accelerate regulatory readiness with built-in governance.',
+    path: '/services/compliance',
+    icon: ServiceIcon6,
+    iconHover: ServiceIconClr6,
+    cta: 'Explore Compliance',
+  },
+];
 
 const Home = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <>
       <section className={styles.heroSection}>
@@ -125,7 +196,7 @@ const Home = () => {
                 <img src={ApartIcon2} />
               </div>
               <p className={styles.apartText}>
-                24/7 managed support and deep Zscaler-certified technical bench.
+                24/7 managed support and deep Microsoft-certified technical bench.
               </p>
             </div>
 
@@ -149,7 +220,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="services" className={styles.services}>
+      {/* <section id="services" className={styles.services}>
         <div className={`container ${styles.serviceContainer}`}>
           <div className={styles.servicesHeading}>
             <h2>A Complete Security Ecosystem</h2>
@@ -203,6 +274,44 @@ const Home = () => {
               <p>Simplify compliance, manage risk, and accelerate regulatory readiness with built-in governance.</p>
               <Link to="/services/compliance" className={styles.btnText}>Explore Compliance</Link>
             </div>
+          </div>
+        </div>
+      </section> */}
+      <section id="services" className={styles.services}>
+        <div className={`container ${styles.serviceContainer}`}>
+          <div className={styles.servicesHeading}>
+            <h2>A Complete Security Ecosystem</h2>
+            <p>Built on the robust Microsoft Security portfolio, managed by ACPL.</p>
+          </div>
+
+          <div className={styles.servicesGrid}>
+            {services.map((service, index) => {
+              const isHovered = hoveredIndex === index;
+
+              return (
+                <div
+                  key={service.title}
+                  className={styles.serviceCard}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div className={styles.serviceCardIcon}>
+                    <img
+                      src={isHovered ? service.iconHover : service.icon}
+                      alt={service.title}
+                    />
+                  </div>
+
+                  <span className={styles.partnerBadge}>{service.badge}</span>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+
+                  <Link to={service.path} className={styles.btnText}>
+                    {service.cta}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

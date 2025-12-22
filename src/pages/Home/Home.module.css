@@ -10,7 +10,7 @@
 
 .heroContainer {
     position: relative;
-}
+}   
 
 .heroSection .background {
     position: absolute;
@@ -18,7 +18,7 @@
     right: 0;
     bottom: -310px;
     height: 50%;
-    background: radial-gradient(circle at center, #00A4EF 0%, #00A4EF 40%, rgba(0, 164, 239, 0) 70%);
+    background-image: radial-gradient(ellipse 90% 60% at center,rgb(0, 164, 239) 0%,rgb(0, 164, 239) 40%,rgba(0, 164, 239, 0) 70%);
     filter: blur(240px);
     pointer-events: none;
     z-index: 0;
@@ -36,18 +36,20 @@
 }
 
 .partnerBadge {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--color-primary);
-    background-color: var(--background-color);
+    background-color: #C0E4FF;
+    border: 1px solid #00A4EF;
     padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 30px;
 }
 
 .pageContent h1 {
     font-size: 56px;
     font-weight: 600;
     line-height: 1.1;
+    font-family: var(--font-heading);
 }
 
 .pageContent p {
@@ -329,6 +331,7 @@
     background-color: var(--background-color);
     padding: 6px 12px;
     border-radius: 4px;
+    border: none;
 }
 
 .serviceCard h3 {

@@ -75,7 +75,7 @@ const AboutUs = () => {
       <section className={styles.acplAdvantage}>
         <div className={`container ${styles.advantageContainer}`}>
           <div className={styles.advantageGrid}>
-            <div>
+            <div className={styles.advantageContent}>
               <p className={styles.advantageTag}>WE RECOMMEND THE BEST</p>
               <h2 className={styles.advantageTitle}>
                 Pioneering Cyber Defense

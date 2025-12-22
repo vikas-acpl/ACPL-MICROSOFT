@@ -33,6 +33,7 @@
     font-size: 56px;
     font-weight: 600;
     line-height: 1.1;
+    font-family: var(--font-heading);
 }
 
 .heroSubtitle {
@@ -93,6 +94,7 @@
     font-weight: 700;
     color: var(--text-black);
     margin-bottom: 8px;
+    font-family: var(--font-heading);
 }
 
 .cardKicker {
