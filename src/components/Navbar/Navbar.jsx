@@ -177,7 +177,7 @@ const Navbar = () => {
                         </p>
                       </div>
                       <div>
-                        <button className='btn btn--primary'>Explore Our Service Packages</button>
+                        <Link to="/service-packages" className='btn btn--primary' onClick={closeMenus}>Explore Our Service Packages</Link>
                       </div>
                     </div>
                   </div>

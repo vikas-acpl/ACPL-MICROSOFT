@@ -112,7 +112,7 @@
 
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .footerContainer {
     flex-direction: column;
     gap: 32px;
@@ -123,7 +123,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .linksGrid {
     grid-template-columns: 1fr;
   }
@@ -133,6 +133,20 @@
   }
 
   .footer {
-    padding-top: 32px;
+    padding-top: 80px;
+  }
+
+  .cta {
+    margin: 60px 0;
+    margin-bottom: -60px;
+  }
+
+  .ctaContent {
+    padding: 40px 24px;
+  }
+
+  .ctaContent h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 }

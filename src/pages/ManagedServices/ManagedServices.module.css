@@ -209,14 +209,8 @@
     width: 100%;
 }
 
-.serviceCardIcon {
+.serviceCardIcon img {
     width: 48px;
-    height: 48px;
-    background: var(--background-color);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .serviceCard h3 {
@@ -270,4 +264,77 @@
     position: absolute;
     left: 0;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+
+    .heroSection {
+        align-items: start;
+    }
+
+    .pageContent {
+        gap: 24px;
+        margin-top: 100px;
+    }
+
+    .pageContent h1 {
+        font-size: 32px;
+    }
+
+    .pageContent p {
+        font-size: 14px;
+    }
+
+    .whyAcpl {}
+
+    .whyCard {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+        gap: 24px;
+    }
+
+    .whyText {
+        text-align: center;
+    }
+
+    .whyTitle {
+        font-size: 24px;
+    }
+
+    .whyBody {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .services {
+        padding: 60px 0;
+    }
+
+    .servicesHeading h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .servicesHeading {
+        margin-bottom: 40px;
+    }
+
+    .servicesHeading p {
+        font-size: 14px;
+    }
+
+    .serviceCard {
+        padding: 24px;
+    }
+
+    .serviceCardHeader {
+        gap: 12px;
+        padding-bottom: 12px;
+    }
+
+    .serviceCardIcon img {
+        width: 40px;
+    }
 }

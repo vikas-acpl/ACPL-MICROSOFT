@@ -162,10 +162,7 @@ const ManagedServices = () => {
               Powered by Microsoft. Delivered by ACPL.</h1>
             <p>From identity and endpoint security to cloud, data, and threat defense, ACPL’s managed services<br />
               ensure round-the-clock monitoring, optimization, and compliance across your Microsoft security stack.</p>
-            <a href="#" className="btn btn--primary">View Security Matrix</a>
-            {/* <div className={styles.actions}>
-              
-            </div> */}
+            <a href="#service-portfolio" className="btn btn--primary">View Security Matrix</a>
           </div>
         </div>
       </section>
@@ -201,7 +198,7 @@ const ManagedServices = () => {
           </div>
         </div>
       </section>
-      <section className={styles.services}>
+      <section id="service-portfolio" className={styles.services}>
         <div className={`container ${styles.serviceContainer}`}>
           <div className={styles.servicesHeading}>
             <h2>Service Portfolio</h2>

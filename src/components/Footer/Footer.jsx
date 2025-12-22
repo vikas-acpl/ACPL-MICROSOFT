@@ -12,8 +12,8 @@ const Footer = () => {
       <section className={styles.cta}>
         <div className={`container ${styles.ctaContainer}`}>
           <div className={styles.ctaContent}>
-            <h2>Secure Your Cloud Journey With ACPL <br />(A Microsoft MSP and CSP Partner)</h2>
-            <button className='btn btn--primary'>Request a Quote</button>
+            <h2>Secure Your Cloud Journey With ACPL <br className='responsive-br' />(A Microsoft MSP and CSP Partner)</h2>
+            <Link to="/contact" className='btn btn--primary'>Request a Quote</Link>
           </div>
         </div>
       </section>
@@ -41,7 +41,7 @@ const Footer = () => {
 
             <div className={styles.linkColumn}>
               <h4 className={styles.columnTitle}>Company</h4>
-              <a href="#" className={styles.link}>About ACPL</a>
+              <a href="https://acpl.com/" target="_blank" rel="noopener noreferrer" className={styles.link}>About ACPL</a>
               <Link to="/contact" className={styles.link}>Contact</Link>
               <Link to="/privacy-policy" className={styles.link}>Privacy Policy</Link>
             </div>
@@ -50,7 +50,7 @@ const Footer = () => {
               <h4 className={styles.columnTitle}>Contact</h4>
               <div className={styles.contactRow}>
                 <img src={GlobeIcon} className={styles.contactIcon} />
-                <a href="https://acpl.com" className={styles.link}>acpl.com</a>
+                <a href="https://acpl.com" target="_blank" rel="noopener noreferrer" className={styles.link}>www.acpl.com</a>
               </div>
               <div className={styles.contactRow}>
                 <img src={MailIcon} className={styles.contactIcon} />

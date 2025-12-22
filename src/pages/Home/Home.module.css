@@ -68,12 +68,11 @@
     gap: 60px;
     padding: 30px;
     background: white;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     border-radius: 8px;
     border: 1px solid #E2E8F0;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-
 }
 
 .uspItem {
@@ -97,9 +96,9 @@
     background-color: var(--color-white);
 }
 
-.advantageContainer {
+/* .advantageContainer {
     display: flex;
-}
+} */
 
 .advantageGrid {
     display: grid;
@@ -319,7 +318,7 @@
     transition: width 0.3s ease;
 }
 
-.serviceCard img{
+.serviceCard img {
     width: 48px;
 }
 
@@ -408,13 +407,7 @@
         font-size: 32px;
     }
 
-    .statsGrid {
-        gap: 16px;
-    }
 
-    .statCard {
-        padding: 22px 20px 20px;
-    }
 
     .serviceDelivery {
         padding: 56px 0;
@@ -422,7 +415,149 @@
 }
 
 @media (max-width: 480px) {
+    .heroSection {
+        align-items: start;
+    }
+
+    .pageContent {
+        gap: 24px;
+        margin-top: 100px;
+    }
+
+    .pageContent h1 {
+        font-size: 32px;
+    }
+
+    .pageContent p {
+        font-size: 14px;
+    }
+
+    .uspBar {
+        margin-top: 20px;
+        gap: 30px;
+        padding: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .uspItem {
+        gap: 8px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .acplAdvantage {
+        padding: 60px 0;
+    }
+
+    .advantageGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .advantageContent {
+        text-align: center;
+    }
+
+    .advantageTag {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .advantageTitle {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .advantageBody {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .advantageBody+.advantageBody {
+        margin-top: 12px;
+    }
+
     .statsGrid {
         grid-template-columns: 1fr;
     }
+
+    .statCard {
+        padding: 24px;
+    }
+
+    .statValue {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .apartGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .apartCard {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .iconCircle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .iconCircle img {
+        width: 30px;
+    }
+
+    .apartTitle {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .serviceCard {
+        padding: 24px;
+        gap: 12px;
+    }
+
+    .serviceCard img {
+        width: 40px;
+    }
+
+    .btnText {
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 60px 0;
+    }
+
+    .servicesHeading {
+        margin-bottom: 40px;
+    }
+
+    .servicesHeading h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .servicesHeading p {
+        font-size: 14px;
+    }
+
+    .serviceDelivery {
+        padding: 60px 0;
+    }
+
+    .serviceDeliveryContainer h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .deliveryApprochImg {
+        height: 220px;
+    }
+
+    .whiteLogo {
+        width: 70px;
+    }
+
 }

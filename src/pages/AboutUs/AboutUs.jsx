@@ -23,7 +23,7 @@ const AboutUs = () => {
               Since 1990.</h1>
             <p>As a certified Microsoft Security partner, ACPL combines deep domain expertise with proven service<br />
               delivery to help organizations modernize, secure, and scale their digital environments with confidence.</p>
-            <a href="#" className="btn btn--primary">Learn About ACPL</a>
+            <a href="https://acpl.com/" target="_blank" rel="noopener noreferrer"className="btn btn--primary">Learn About ACPL</a>
           </div>
         </div>
       </section>

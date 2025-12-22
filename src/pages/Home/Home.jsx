@@ -26,13 +26,12 @@ const Home = () => {
           <div className={styles.background}></div>
           <div className={styles.pageContent}>
             <span className={styles.partnerBadge}>Powered by ACPL & Microsoft</span>
-            <h1>Secure Your Cloud.<br />
-              Strengthen Your Enterprise.</h1>
-            <p>End-to-end cloud, identity, endpoint, data, and threat protection <br />
+            <h1>Secure Your Cloud. <br className='responsive-br' />Strengthen Your Enterprise.</h1>
+            <p>End-to-end cloud, identity, endpoint, data, and threat protection <br className='responsive-br' />
               designed for modern enterprises across hybrid and multicloud environments.</p>
             <div className={styles.actions}>
-              <a href="#" className="btn btn--primary">Get a Security Consultation</a>
-              <a href="#" className="btn btn--secondary">Explore Services</a>
+              <Link to="/contact" className="btn btn--primary">Get a Security Consultation</Link>
+              <a href="#services" className="btn btn--secondary">Explore Services</a>
             </div>
             <div className={styles.uspBar}>
               <div className={styles.uspItem}>
@@ -58,7 +57,7 @@ const Home = () => {
       <section className={styles.acplAdvantage}>
         <div className={`container ${styles.advantageContainer}`}>
           <div className={styles.advantageGrid}>
-            <div>
+            <div className={styles.advantageContent}>
               <p className={styles.advantageTag}>The ACPL Advantage</p>
               <h2 className={styles.advantageTitle}>
                 A Legacy of Trust.<br />Future-Ready Security.
@@ -150,7 +149,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className={styles.services}>
+      <section id="services" className={styles.services}>
         <div className={`container ${styles.serviceContainer}`}>
           <div className={styles.servicesHeading}>
             <h2>A Complete Security Ecosystem</h2>
