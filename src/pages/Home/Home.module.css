@@ -10,7 +10,7 @@
 
 .heroContainer {
     position: relative;
-}   
+}
 
 .heroSection .background {
     position: absolute;
@@ -18,7 +18,7 @@
     right: 0;
     bottom: -310px;
     height: 50%;
-    background-image: radial-gradient(ellipse 90% 60% at center,rgb(0, 164, 239) 0%,rgb(0, 164, 239) 40%,rgba(0, 164, 239, 0) 70%);
+    background-image: radial-gradient(ellipse 90% 60% at center, rgb(0, 164, 239) 0%, rgb(0, 164, 239) 40%, rgba(0, 164, 239, 0) 70%);
     filter: blur(240px);
     pointer-events: none;
     z-index: 0;
@@ -410,8 +410,6 @@
         font-size: 32px;
     }
 
-
-
     .serviceDelivery {
         padding: 56px 0;
     }
@@ -422,12 +420,19 @@
         align-items: start;
     }
 
+    .heroSection .background {
+        bottom: -310px;
+        height: 40%;
+        filter: blur(120px);
+        -webkit-filter: blur(120px);
+    }
+
     .pageContent {
         gap: 24px;
         margin-top: 100px;
     }
 
-    .partnerBadge{
+    .partnerBadge {
         font-size: 12px;
     }
 

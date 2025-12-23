@@ -127,18 +127,20 @@
 
 @media (max-width: 480px) {
   .heroSection {
-    height: 30vh;
-    align-items: start;
+    min-height: 35vh;
+    height: auto;
   }
 
   .heroSection .background {
-    bottom: 0px;
-    -webkit-backdrop-filter: blur(50px) !important;
+    bottom: -100px;
+    height: 80%;
+    filter: blur(120px);
+    -webkit-filter: blur(120px);
   }
 
   .pageContent {
     gap: 24px;
-    margin-top: 130px;
+    margin-top: 80px;
   }
 
   .pageContent h1 {

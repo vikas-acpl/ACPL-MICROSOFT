@@ -43,42 +43,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className={`${styles.navMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
             <ul className={styles.navList}>
-              {/* <li className={styles.navItem}>
-                <button
-                  className={`${styles.navLink} ${styles.dropdownToggle} ${isServicesOpen ? styles.active : ''}`}
-                  onClick={toggleServicesDropdown}
-                >
-                  Services
-                  <svg className={styles.chevronIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-
-                {isServicesOpen && (
-                  <div className={styles.dropdownMenu}>
-                    <div className={`container ${styles.dropdownInner}`}>
-                      <div className={styles.dropdownContent}>
-                        <div className={styles.dropdownSection}>
-                          <h4 className={styles.dropdownTitle}>Cloud Services</h4>
-                          <ul className={styles.dropdownList}>
-                            <li><Link to="/services/cloud-security" onClick={closeMenus}>Cloud Security & Firewall</Link></li>
-                            <li><Link to="/services/endpoint-security" onClick={closeMenus}>Endpoint Security & Management</Link></li>
-                            <li><Link to="/services/data-security" onClick={closeMenus}>Data Security & Governance</Link></li>
-                          </ul>
-                        </div>
-                        <div className={styles.dropdownSection}>
-                          <h4 className={styles.dropdownTitle}>Security Solutions</h4>
-                          <ul className={styles.dropdownList}>
-                            <li><Link to="/services/zero-trust" onClick={closeMenus}>Zero Trust & Identity</Link></li>
-                            <li><Link to="/services/siem-xdr" onClick={closeMenus}>SIEM & XDR</Link></li>
-                            <li><Link to="/services/compliance" onClick={closeMenus}>Compliance Management</Link></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </li> */}
               <li className={styles.navItem}>
                 <button
                   className={`${styles.navLink} ${styles.dropdownToggle} ${isServicesOpen ? styles.active : ''
@@ -171,8 +135,8 @@ const Navbar = () => {
                     </div>
                     <div className={styles.dropdownSubsection}>
                       <div className={styles.subsectionContent}>
-                        <h4>Still Confused?</h4>
-                        <p>
+                        <h4 className={styles.subsectionHeading}>Still Confused?</h4>
+                        <p className={styles.subsectionPara}>
                           Choose a Microsoft security service package and accelerate your implementation journey.
                         </p>
                       </div>

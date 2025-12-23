@@ -24,6 +24,7 @@ import ServiceIconClr3 from '../../assets/ServiceIconClr3.svg'
 import ServiceIconClr4 from '../../assets/ServiceIconClr4.svg'
 import ServiceIconClr5 from '../../assets/ServiceIconClr5.svg'
 import ServiceIconClr6 from '../../assets/ServiceIconClr6.svg'
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -90,6 +91,88 @@ const services = [
 
 const Home = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
+  const stats = [
+    {
+      value: '35+',
+      label: 'Years Experience',
+      description:
+        'Three decades of focused cybersecurity leadership in India and globally.',
+    },
+    {
+      value: '100%',
+      label: 'Cyber Focused',
+      description:
+        "We don't do general IT. We specialize exclusively in securing your digital estate.",
+    },
+    {
+      value: 'Top 100',
+      label: 'MSSP India',
+      description:
+        'Recognized globally for excellence in Managed Security Services.',
+    },
+    {
+      value: '350+',
+      label: 'Certified Engineers',
+      description:
+        'Certified Solutions Engineers for Security, Identity, and Compliance.',
+    },
+  ];
+
+  const apartContainer = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, staggerChildren: 0.12 },
+    },
+  };
+
+  const apartItem = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+  };
+
+  const apartCards = [
+    {
+      icon: ApartIcon1,
+      text:
+        'Over 3 decades of expertise securing critical industries with trusted cybersecurity solutions.',
+    },
+    {
+      icon: ApartIcon2,
+      text:
+        '24/7 managed support and deep Microsoft-certified technical bench.',
+    },
+    {
+      icon: ApartIcon3,
+      text:
+        'Holistic approach covering user access, data protection, threat prevention, and compliance.',
+    },
+    {
+      icon: ApartIcon4,
+      text:
+        'Successful deployments in BFSI, pharma, critical infrastructure, and IT/ITES sectors.',
+    },
+  ];
+
   return (
     <>
       <section className={styles.heroSection}>
@@ -125,148 +208,198 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className={styles.acplAdvantage}>
-        <div className={`container ${styles.advantageContainer}`}>
-          <div className={styles.advantageGrid}>
-            <div className={styles.advantageContent}>
-              <p className={styles.advantageTag}>The ACPL Advantage</p>
-              <h2 className={styles.advantageTitle}>
-                A Legacy of Trust.<br />Future-Ready Security.
-              </h2>
-              <p className={styles.advantageBody}>
-                ACPL Systems is a premier Information Security Service Provider with a legacy of over three decades. As a dedicated partner to global enterprises, we don't just deploy software; we architect resilient security postures using deep technical expertise.
-              </p>
-              <p className={styles.advantageBody}>
-                Through our strategic alliance with Microsoft, we deliver integrated, cloud-native capabilities that protect your identities, data, and infrastructure—powered by AI-driven platforms and ACPL's award-winning managed services.
-              </p>
-            </div>
-
-            <div className={styles.statsGrid}>
-              <div className={styles.statCard}>
-                <div className={styles.statHighlight}></div>
-                <p className={styles.statValue}>35+</p>
-                <p className={styles.statLabel}>Years Experience</p>
-                <p className={styles.statDescription}>
-                  Three decades of focused cybersecurity leadership in India and globally.
-                </p>
-              </div>
-              <div className={styles.statCard}>
-                <div className={styles.statHighlight}></div>
-                <p className={styles.statValue}>100%</p>
-                <p className={styles.statLabel}>Cyber Focused</p>
-                <p className={styles.statDescription}>
-                  We don't do general IT. We specialize exclusively in securing your digital estate.
-                </p>
-              </div>
-              <div className={styles.statCard}>
-                <div className={styles.statHighlight}></div>
-                <p className={styles.statValue}>Top 100</p>
-                <p className={styles.statLabel}>MSSP India</p>
-                <p className={styles.statDescription}>
-                  Recognized globally for excellence in Managed Security Services.
-                </p>
-              </div>
-              <div className={styles.statCard}>
-                <div className={styles.statHighlight}></div>
-                <p className={styles.statValue}>350+</p>
-                <p className={styles.statLabel}>Certified Engineers</p>
-                <p className={styles.statDescription}>
-                  Certified Solutions Engineers for Security, Identity, andCompliance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className={styles.setUsApart}>
-        <div className={`container ${styles.apartContainer}`}>
-          <h2 className={styles.apartTitle}>What Sets Us Apart</h2>
-          <div className={styles.apartGrid}>
-            <div className={styles.apartCard}>
-              <div className={styles.iconCircle}>
-                <img src={ApartIcon1} />
-              </div>
-              <p className={styles.apartText}>
-                Over 3 decades of expertise securing critical industries with trusted cybersecurity solutions.
-              </p>
-            </div>
-
-            <div className={styles.apartCard}>
-              <div className={styles.iconCircle}>
-                <img src={ApartIcon2} />
-              </div>
-              <p className={styles.apartText}>
-                24/7 managed support and deep Microsoft-certified technical bench.
-              </p>
-            </div>
-
-            <div className={styles.apartCard}>
-              <div className={styles.iconCircle}>
-                <img src={ApartIcon3} />
-              </div>
-              <p className={styles.apartText}>
-                Holistic approach covering user access, data protection, threat prevention, and compliance.
-              </p>
-            </div>
-
-            <div className={styles.apartCard}>
-              <div className={styles.iconCircle}>
-                <img src={ApartIcon4} />
-              </div>
-              <p className={styles.apartText}>
-                Successful deployments in BFSI, pharma, critical infrastructure, and IT/ITES sectors.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="services" className={styles.services}>
-        <div className={`container ${styles.serviceContainer}`}>
-          <div className={styles.servicesHeading}>
-            <h2>A Complete Security Ecosystem</h2>
-            <p>Built on the robust Microsoft Security portfolio, managed by ACPL.</p>
-          </div>
-
-          <div className={styles.servicesGrid}>
-            {services.map((service, index) => {
-              const isHovered = hoveredIndex === index;
-
-              return (
-                <div
-                  key={service.title}
-                  className={styles.serviceCard}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
+      <motion.section
+        initial={{ opacity: 0, y: 56 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          type: 'tween',
+          duration: 0.6,
+          ease: 'easeOut',
+        }}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <section className={styles.acplAdvantage}>
+          <div className={`container ${styles.advantageContainer}`}>
+            <div className={styles.advantageGrid}>
+              {/* Left content */}
+              <motion.div
+                className={styles.advantageContent}
+                variants={containerVariants}
+              >
+                <motion.p
+                  variants={itemVariants}
+                  className={styles.advantageTag}
                 >
-                  <div className={styles.serviceCardIcon}>
-                    <img
-                      src={isHovered ? service.iconHover : service.icon}
-                      alt={service.title}
-                    />
+                  The ACPL Advantage
+                </motion.p>
+
+                <motion.h2
+                  variants={itemVariants}
+                  className={styles.advantageTitle}
+                >
+                  A Legacy of Trust.<br />
+                  Future-Ready Security.
+                </motion.h2>
+
+                <motion.p
+                  variants={itemVariants}
+                  className={styles.advantageBody}
+                >
+                  ACPL Systems is a premier Information Security Service Provider
+                  with a legacy of over three decades. As a dedicated partner to
+                  global enterprises, we do not just deploy software; we architect
+                  resilient security postures using deep technical expertise.
+                </motion.p>
+
+                <motion.p
+                  variants={itemVariants}
+                  className={styles.advantageBody}
+                >
+                  Through our strategic alliance with Microsoft, we deliver
+                  integrated, cloud-native capabilities that protect your identities,
+                  data, and infrastructure—powered by AI-driven platforms and ACPL&apos;s
+                  award-winning managed services.
+                </motion.p>
+              </motion.div>
+
+              {/* Right stats grid */}
+              <motion.div
+                className={styles.statsGrid}
+                variants={containerVariants}
+              >
+                {stats.map((stat) => (
+                  <motion.div
+                    key={stat.label}
+                    className={styles.statCard}
+                    variants={itemVariants}
+                  >
+                    <div className={styles.statHighlight}></div>
+                    <p className={styles.statValue}>{stat.value}</p>
+                    <p className={styles.statLabel}>{stat.label}</p>
+                    <p className={styles.statDescription}>
+                      {stat.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 56 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          type: 'tween',
+          duration: 0.6,
+          ease: 'easeOut',
+        }}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <section className={styles.setUsApart}>
+          <div className={`container ${styles.apartContainer}`}>
+            <motion.h2
+              className={styles.apartTitle}
+              variants={apartItem}
+            >
+              What Sets Us Apart
+            </motion.h2>
+
+            <motion.div
+              className={styles.apartGrid}
+              variants={apartContainer}
+            >
+              {apartCards.map((card, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.apartCard}
+                  variants={apartItem}
+                  whileHover={{
+                    y: -6,
+                    scale: 1.02,
+                    boxShadow: '0 18px 45px rgba(15,23,42,0.15)',
+                  }}
+                  transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                >
+                  <div className={styles.iconCircle}>
+                    <img src={card.icon} alt="" />
                   </div>
-
-                  <span className={styles.partnerBadge}>{service.badge}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-
-                  <Link to={service.path} className={styles.btnText}>
-                    {service.cta}
-                  </Link>
-                </div>
-              );
-            })}
+                  <p className={styles.apartText}>{card.text}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-        </div>
-      </section>
-      <section className={styles.serviceDelivery}>
-        <div className={`container ${styles.serviceDeliveryContainer}`}>
-          <h2>Service Delivery Approach</h2>
-          <div className={styles.deliveryFrame}>
-            <img src={DeliveryApproch} className={styles.deliveryApprochImg} />
-            <img src={AcplWhiteLogo} className={styles.whiteLogo} />
+        </section>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 56 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          type: 'tween',
+          duration: 0.6,
+          ease: 'easeOut',
+        }}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <section id="services" className={styles.services}>
+          <div className={`container ${styles.serviceContainer}`}>
+            <div className={styles.servicesHeading}>
+              <h2>A Complete Security Ecosystem</h2>
+              <p>Built on the robust Microsoft Security portfolio, managed by ACPL.</p>
+            </div>
+
+            <div className={styles.servicesGrid}>
+              {services.map((service, index) => {
+                const isHovered = hoveredIndex === index;
+
+                return (
+                  <div
+                    key={service.title}
+                    className={styles.serviceCard}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <div className={styles.serviceCardIcon}>
+                      <img
+                        src={isHovered ? service.iconHover : service.icon}
+                        alt={service.title}
+                      />
+                    </div>
+
+                    <span className={styles.partnerBadge}>{service.badge}</span>
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+
+                    <Link to={service.path} className={styles.btnText}>
+                      {service.cta}
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 56 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          type: 'tween',
+          duration: 0.6,
+          ease: 'easeOut',
+        }}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <section className={styles.serviceDelivery}>
+          <div className={`container ${styles.serviceDeliveryContainer}`}>
+            <h2>Service Delivery Approach</h2>
+            <div className={styles.deliveryFrame}>
+              <img src={DeliveryApproch} className={styles.deliveryApprochImg} />
+              <img src={AcplWhiteLogo} className={styles.whiteLogo} />
+            </div>
+          </div>
+        </section>
+      </motion.section>
     </>
   )
 }

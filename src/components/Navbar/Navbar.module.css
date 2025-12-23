@@ -116,31 +116,32 @@
 }
 
 .dropdownMenu {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%);        /* center under “Services” */
-  background-color: var(--color-white);
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
-  padding: 24px;
-  z-index: 1000;
-  animation: navSlideDown 0.18s ease-out;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    /* center under “Services” */
+    background-color: var(--color-white);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+    padding: 24px;
+    z-index: 1000;
+    animation: navSlideDown 0.18s ease-out;
 }
 
 .dropdownContent {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
-  column-gap: 24px;
-  row-gap: 16px;
-  margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    column-gap: 24px;
+    row-gap: 16px;
+    margin-bottom: 18px;
 }
 
 .dropdownSection {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .dropdownSection:last-child {
@@ -181,29 +182,29 @@
 }
 
 .dropdownSubsection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-radius: 10px;
 }
 
 .subsectionContent {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.subsectionContent h4 {
-  font-family: var(--font-heading);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-primary);
+.subsectionContent .subsectionHeading {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
 }
 
-.subsectionContent p {
-  font-size: 14px;
-  color: var(--text-secondary);
+.subsectionContent .subsectionPara {
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
 .ctaButton {
@@ -255,26 +256,26 @@
 }
 
 .serviceItem img {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .serviceItem h3 {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-black);
-  margin-bottom: 4px;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 4px;
 }
 
-.serviceItem h3:hover{
+.serviceItem h3:hover {
     color: var(--color-primary);
 }
 
 .serviceItem p {
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--text-gray);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-gray);
 }
 
 @media (max-width: 1024px) {
@@ -323,25 +324,6 @@
         width: 100%;
         justify-content: space-between;
         padding: 20px;
-    }
-
-    .dropdownMenu {
-        position: static;
-        box-shadow: none;
-        border-radius: 0;
-        border: none;
-        min-width: 100%;
-        margin-top: 0;
-    }
-
-    .dropdownContent {
-        grid-template-columns: 1fr;
-    }
-
-    .dropdownSection {
-        border-right: none;
-        border-top: 1px solid #e2e8f0;
-        padding: 16px 24px;
     }
 
     .ctaButton {
@@ -394,4 +376,59 @@
     .contactBtn {
         margin: 20px;
     }
+
+    .dropdownMenu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        min-width: 100%;
+        margin-top: 0;
+        transform: translateX(0);
+        padding: 0;
+    }
+
+    .dropdownSubsection{
+        gap: 0;
+        justify-content: flex-start;
+        padding: 0px 20px 20px 20px;
+    }
+
+    .dropdownContent {
+        grid-template-columns: 1fr;
+        row-gap: 0;
+        margin-bottom: 0;
+    }
+
+      .dropdownSection {
+        border-right: none;
+        border-top: 1px solid #e2e8f0;
+        padding: 10px;
+    }
+
+    .dropdownList{
+        gap: 0;
+    }
+
+    .subsectionContent .subsectionPara {
+        display: none;
+    }
+
+    .subsectionContent .subsectionHeading {
+        display: none;
+    }
+
+    .serviceItem h3{
+        font-size: 14px;
+        font-weight: 400;
+        font-family: var(--font-primary);
+    }
+
+    .serviceItem p {
+        display: none;
+    }
+
+    .serviceItem img {
+        display: none;
+}
 }

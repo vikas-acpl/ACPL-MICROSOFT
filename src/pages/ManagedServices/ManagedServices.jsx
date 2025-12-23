@@ -7,6 +7,7 @@ import ServiceIcon3 from '../../assets/ServiceIcon3.svg'
 import ServiceIcon4 from '../../assets/ServiceIcon4.svg'
 import ServiceIcon5 from '../../assets/ServiceIcon5.svg'
 import ServiceIcon6 from '../../assets/ServiceIcon6.svg'
+import { motion } from "framer-motion";
 
 const Services = [
   {
@@ -198,54 +199,65 @@ const ManagedServices = () => {
           </div>
         </div>
       </section>
-      <section id="service-portfolio" className={styles.services}>
-        <div className={`container ${styles.serviceContainer}`}>
-          <div className={styles.servicesHeading}>
-            <h2>Service Portfolio</h2>
-            <p>Explore our tiered support and management capabilities.</p>
-          </div>
-          <div className={styles.servicesGrid}>
-            {Services.map(service => (
-              <div key={service.id} className={styles.serviceCard}>
-                <div className={styles.serviceCardHeader}>
-                  <div className={styles.serviceCardIcon}>
-                    <img src={service.icon} alt={service.title} />
-                  </div>
-                  <h3>{service.title}</h3>
-                </div>
-
-                <div className={styles.serviceCardBody}>
-                  {service.tiers.map(tier => (
-                    <div
-                      key={tier.type}
-                      className={styles.serviceCardRow}
-                    >
-                      <span
-                        className={
-                          `tierBadge ${tier.type === 'fix'
-                            ? styles.badgeFix
-                            : tier.type === 'manage'
-                              ? styles.badgeManage
-                              : styles.badgeCheck
-                          }`
-                        }
-                      >
-                        {tier.label}
-                      </span>
-
-                      <ul className={styles.serviceList}>
-                        {tier.items.map(item => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
+      <motion.section
+        initial={{ opacity: 0, y: 56 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          type: 'tween',
+          duration: 0.6,
+          ease: 'easeOut',
+        }}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <section id="service-portfolio" className={styles.services}>
+          <div className={`container ${styles.serviceContainer}`}>
+            <div className={styles.servicesHeading}>
+              <h2>Service Portfolio</h2>
+              <p>Explore our tiered support and management capabilities.</p>
+            </div>
+            <div className={styles.servicesGrid}>
+              {Services.map(service => (
+                <div key={service.id} className={styles.serviceCard}>
+                  <div className={styles.serviceCardHeader}>
+                    <div className={styles.serviceCardIcon}>
+                      <img src={service.icon} alt={service.title} />
                     </div>
-                  ))}
+                    <h3>{service.title}</h3>
+                  </div>
+
+                  <div className={styles.serviceCardBody}>
+                    {service.tiers.map(tier => (
+                      <div
+                        key={tier.type}
+                        className={styles.serviceCardRow}
+                      >
+                        <span
+                          className={
+                            `tierBadge ${tier.type === 'fix'
+                              ? styles.badgeFix
+                              : tier.type === 'manage'
+                                ? styles.badgeManage
+                                : styles.badgeCheck
+                            }`
+                          }
+                        >
+                          {tier.label}
+                        </span>
+
+                        <ul className={styles.serviceList}>
+                          {tier.items.map(item => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </motion.section>
     </>
   )
 }
