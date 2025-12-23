@@ -54,8 +54,8 @@ const Footer = () => {
               </div>
               <div className={styles.contactRow}>
                 <img src={MailIcon} className={styles.contactIcon} />
-                <a href="mailto:microsoft.experts@acpl.com" className={styles.link}>
-                  microsoft.experts@acpl.com
+                <a href="mailto:microsoftsecurity-experts@acpl.com" className={styles.link}>
+                  microsoftsecurity-experts@acpl.com
                 </a>
               </div>
               <div className={styles.contactRow}>
