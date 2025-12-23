@@ -20,9 +20,8 @@ const AboutUs = () => {
           <div className={styles.background}></div>
           <div className={styles.pageContent}>
             <span className={styles.partnerBadge}>About ACPL</span>
-            <h1>Securing Digital Assets<br />
-              Since 1990.</h1>
-            <p>As a certified Microsoft Security partner, ACPL combines deep domain expertise with proven service<br />
+            <h1>Securing Digital Assets <br className='responsive-br'/>Since 1990.</h1>
+            <p>As a certified Microsoft Security partner, ACPL combines deep domain expertise with proven service<br className='responsive-br' />
               delivery to help organizations modernize, secure, and scale their digital environments with confidence.</p>
             <a href="https://acpl.com/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">Learn About ACPL</a>
           </div>

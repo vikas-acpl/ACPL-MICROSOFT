@@ -14,8 +14,7 @@ const ServicePackages = () => {
                     <div className={styles.background}></div>
                     <div className={styles.pageContent}>
                         <span className={styles.partnerBadge}>Service Packages</span>
-                        <h1>Structured Microsoft Security Services.<br className='responsive-br' />
-                            Predictable Outcomes.</h1>
+                        <h1>Structured Microsoft Security Services. <br className='responsive-br' />Predictable Outcomes.</h1>
                         <p>Explore ACPL’s predefined Microsoft security service packages designed with clear scope, delivery<br className='responsive-br' />
                             timelines, and outcome-driven execution across cloud, identity, data, and threat protection.</p>
                     </div>

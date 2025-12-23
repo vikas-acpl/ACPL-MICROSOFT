@@ -180,7 +180,7 @@ const Home = () => {
         <Squares
             speed={0.4}
             squareSize={70}
-            direction='down'
+            direction='up'
             borderColor='#F1FAFF'
             hoverFillColor='#fff'
           />
