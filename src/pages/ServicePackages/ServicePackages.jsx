@@ -13,7 +13,7 @@ const ServicePackages = () => {
                 <div className={`container ${styles.heroContainer}`}>
                     <div className={styles.background}></div>
                     <div className={styles.pageContent}>
-                        <span className={styles.partnerBadge}>SERVICE PACKAGES</span>
+                        <span className={styles.partnerBadge}>Service Packages</span>
                         <h1>Structured Microsoft Security Services.<br className='responsive-br' />
                             Predictable Outcomes.</h1>
                         <p>Explore ACPL’s predefined Microsoft security service packages designed with clear scope, delivery<br className='responsive-br' />
