@@ -256,8 +256,8 @@
 }
 
 .serviceItem img {
-    width: 32px;
-    height: 32px;
+    max-width: 40px !important;
+    height: 40px;
 }
 
 .serviceItem h3 {

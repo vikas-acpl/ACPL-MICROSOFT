@@ -25,6 +25,7 @@ import ServiceIconClr4 from '../../assets/ServiceIconClr4.svg'
 import ServiceIconClr5 from '../../assets/ServiceIconClr5.svg'
 import ServiceIconClr6 from '../../assets/ServiceIconClr6.svg'
 import { motion } from "framer-motion";
+import Squares from '../../components/Squares/Squares';
 
 const services = [
   {
@@ -176,6 +177,13 @@ const Home = () => {
   return (
     <>
       <section className={styles.heroSection}>
+        <Squares
+            speed={0.4}
+            squareSize={70}
+            direction='down'
+            borderColor='#F1FAFF'
+            hoverFillColor='#fff'
+          />
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.background}></div>
           <div className={styles.pageContent}>

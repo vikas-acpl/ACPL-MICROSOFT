@@ -87,7 +87,7 @@ const Services = [
       {
         type: 'fix',
         label: 'Break & Fix',
-        items: ['Purview DLP/QP', 'Information Protection'],
+        items: ['Purview DLP', 'Information Protection'],
       },
       {
         type: 'manage',
