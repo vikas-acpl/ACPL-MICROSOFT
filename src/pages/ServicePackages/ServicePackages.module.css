@@ -18,7 +18,7 @@
     right: 0;
     bottom: -310px;
     height: 50%;
-    background-image: radial-gradient(ellipse 90% 60% at center,rgb(0, 164, 239) 0%,rgb(0, 164, 239) 40%,rgba(0, 164, 239, 0) 70%);
+    background-image: radial-gradient(ellipse 90% 60% at center, rgb(0, 164, 239) 0%, rgb(0, 164, 239) 40%, rgba(0, 164, 239, 0) 70%);
     filter: blur(240px);
     pointer-events: none;
     z-index: 0;
@@ -59,7 +59,7 @@
 
 .solutions {
     margin-top: -100px;
-  z-index: 1;
+    z-index: 1;
 }
 
 .solutionContainer {
@@ -132,11 +132,11 @@
     color: var(--text-black);
 }
 
-.offering{
+.offering {
     margin-top: 100px;
 }
 
-.offeringContent{
+.offeringContent {
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -144,7 +144,7 @@
     align-items: center;
 }
 
-.offeringContent img{
+.offeringContent img {
     width: 1200px;
 }
 
@@ -153,17 +153,67 @@
         border-radius: 18px;
     }
 
-    .heading {
-        font-size: 14px;
-    }
-
-    .groupHeader {
-        padding: 10px 16px 6px;
-    }
-
     .colTitle,
     .colDays {
         padding-left: 16px;
         padding-right: 16px;
     }
+}
+
+@media (max-width: 480px) {
+
+    .heroSection {
+        height: 75vh;
+        align-items: start;
+    }
+
+    .heroSection .background {
+        bottom: -200px;
+        height: 40%;
+        filter: blur(120px);
+        -webkit-filter: blur(120px);
+    }
+
+    .pageContent {
+        gap: 24px;
+        margin-top: 100px;
+    }
+
+    .pageContent h1 {
+        font-size: 32px;
+    }
+
+    .partnerBadge {
+        font-size: 12px;
+    }
+
+    .pageContent p {
+        font-size: 14px;
+    }
+
+    .headerRow {
+        padding-bottom: 24px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .groupHeader {
+        font-size: 16px;
+        padding: 10px 16px 6px;
+    }
+
+    .offering{
+        margin-top: 60px;
+    }
+
+    .offeringContent{
+        gap:60px;
+    }
+
+    .offeringContent img {
+        width: 100%;
+    }
+
 }

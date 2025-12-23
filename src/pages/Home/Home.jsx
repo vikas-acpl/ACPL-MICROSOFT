@@ -28,34 +28,34 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: 'Cloud Security',
+    title: 'Cloud Security and Firewall',
     badge: 'Azure · Defender for Cloud',
     description:
       'Secure your cloud workloads with automated threat protection and CSPM across Azure and multicloud.',
     path: '/services/cloud-security',
     icon: ServiceIcon1,
     iconHover: ServiceIconClr1,
-    cta: 'Explore Cloud',
+    cta: 'Explore More',
   },
   {
-    title: 'Endpoint Security',
+    title: 'Endpoint Security & Management',
     badge: 'Defender for Endpoint · Intune',
     description:
       'Protect and manage every device with AI-powered prevention and detection across Windows, macOS, iOS, and Android.',
     path: '/services/endpoint-security',
     icon: ServiceIcon2,
     iconHover: ServiceIconClr2,
-    cta: 'Explore Endpoint',
+    cta: 'Explore More',
   },
   {
-    title: 'Identity & Access',
+    title: 'Zero Trust & Identity',
     badge: 'Microsoft Entra ID',
     description:
       'Implement Zero Trust with secure access, adaptive authentication, and lifecycle governance.',
     path: '/services/zero-trust',
     icon: ServiceIcon3,
     iconHover: ServiceIconClr3,
-    cta: 'Explore Identity',
+    cta: 'Explore More',
   },
   {
     title: 'SIEM & XDR',
@@ -65,27 +65,27 @@ const services = [
     path: '/services/siem-xdr',
     icon: ServiceIcon4,
     iconHover: ServiceIconClr4,
-    cta: 'Explore SIEM',
+    cta: 'Explore More',
   },
   {
-    title: 'Data Security',
+    title: 'Data Security & Governance',
     badge: 'Microsoft Purview',
     description:
       'Discover, classify, monitor, and protect sensitive business data across clouds, endpoints, and apps.',
     path: '/services/data-security',
     icon: ServiceIcon5,
     iconHover: ServiceIconClr5,
-    cta: 'Explore Data',
+    cta: 'Explore More',
   },
   {
-    title: 'Compliance',
+    title: 'Compliance Management',
     badge: 'Compliance Manager',
     description:
       'Simplify compliance, manage risk, and accelerate regulatory readiness with built-in governance.',
     path: '/services/compliance',
     icon: ServiceIcon6,
     iconHover: ServiceIconClr6,
-    cta: 'Explore Compliance',
+    cta: 'Explore More',
   },
 ];
 

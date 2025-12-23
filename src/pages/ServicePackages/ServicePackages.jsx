@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './ServicePackages.module.css'
 import { PROFESSIONAL_SERVICES } from '../../data/professionalServices'
 import MicrosoftOffering from '../../assets/MicrosoftOffering.svg'
+import MicrosoftOfferingMob from '../../assets/MicrosoftOfferingMob.svg'
 import ACPLServicesOffering from '../../assets/ACPLServicesOffering.svg'
+import ACPLServicesOfferingMob from '../../assets/ACPLServicesOfferingMob.svg'
 
 const ServicePackages = () => {
     return (
@@ -12,9 +14,9 @@ const ServicePackages = () => {
                     <div className={styles.background}></div>
                     <div className={styles.pageContent}>
                         <span className={styles.partnerBadge}>SERVICE PACKAGES</span>
-                        <h1>Structured Microsoft Security Services.<br />
+                        <h1>Structured Microsoft Security Services.<br className='responsive-br' />
                             Predictable Outcomes.</h1>
-                        <p>Explore ACPL’s predefined Microsoft security service packages designed with clear scope, delivery<br />
+                        <p>Explore ACPL’s predefined Microsoft security service packages designed with clear scope, delivery<br className='responsive-br' />
                             timelines, and outcome-driven execution across cloud, identity, data, and threat protection.</p>
                     </div>
                 </div>
@@ -54,8 +56,10 @@ const ServicePackages = () => {
             <section className={styles.offering}>
                 <div className={`container ${styles.offeringContainer}`}>
                     <div className={styles.offeringContent}>
-                        <img src={MicrosoftOffering} />
-                        <img src={ACPLServicesOffering} />
+                        <img className='mobileView' src={MicrosoftOffering} />
+                        <img className='desktopView' src={MicrosoftOfferingMob} />
+                        <img className='mobileView' src={ACPLServicesOffering} />
+                        <img className='desktopView' src={ACPLServicesOfferingMob} />
                     </div>
                 </div>
             </section>
