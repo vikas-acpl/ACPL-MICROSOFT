@@ -158,7 +158,7 @@ const ManagedServices = () => {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.background}></div>
           <div className={styles.pageContent}>
-            <span className={styles.partnerBadge}>Managed Services</span>
+            {/* <span className={styles.partnerBadge}>Managed Services</span> */}
             <h1>Continuous Protection<br />
               Powered by Microsoft. Delivered by ACPL.</h1>
             <p>From identity and endpoint security to cloud, data, and threat defense, ACPL’s managed services<br />

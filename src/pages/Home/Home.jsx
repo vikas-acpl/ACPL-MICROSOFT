@@ -187,7 +187,7 @@ const Home = () => {
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.background}></div>
           <div className={styles.pageContent}>
-            <span className={styles.partnerBadge}>Powered by ACPL & Microsoft</span>
+            {/* <span className={styles.partnerBadge}>Powered by ACPL & Microsoft</span> */}
             <h1>Secure Your Cloud. <br className='responsive-br' />Strengthen Your Enterprise.</h1>
             <p>End-to-end cloud, identity, endpoint, data, and threat protection <br className='responsive-br' />
               designed for modern enterprises across hybrid and multicloud environments.</p>
