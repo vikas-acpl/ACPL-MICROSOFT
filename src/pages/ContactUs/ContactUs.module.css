@@ -64,7 +64,7 @@
 
 @media (max-width: 480px) {
      .heroSection {
-        height: 65vh;
+        height: 55vh;
         align-items: start;
     }
 
